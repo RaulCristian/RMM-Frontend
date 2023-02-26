@@ -1,30 +1,54 @@
 <template>
-  <nav>
-    <router-link to="/">Home</router-link> |
-    <router-link to="/about">About</router-link>
-  </nav>
-  <router-view/>
+  
+  <main class="main-container">
+    <router-view />
+  </main>
+  
 </template>
 
+<script>
+import Sidebar from './components/Sidebar.vue'
+import Header from './components/Header.vue'
+import Spinner from './components/Spinner.vue'
+
+export default {
+  name: 'App',
+  components: { 
+    Header,
+    Sidebar,
+    Spinner,
+  },
+  
+  
+}
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+  #app {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-nav {
-  padding: 30px;
-}
-
-nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-nav a.router-link-exact-active {
-  color: #42b983;
-}
+  p {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+  
+  body {
+    font-family: Roboto, Arial;
+    background-color: rgb(248, 248, 248);
+    margin: 0;
+  }
+  
+  .main-container {
+    display: flex;
+    width: 100%;
+    
+  }
+  
+  .table {
+    width: 100%;
+  }
+  
 </style>
